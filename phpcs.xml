@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<ruleset name="StarsField">
+	<description>Check WordPress coding standards</description>
+
+	<file>.</file>
+
+	<exclude-pattern>./node_modules/*</exclude-pattern>
+	<exclude-pattern>./*.js</exclude-pattern>
+	<exclude-pattern>./*.css</exclude-pattern>
+
+	<arg value="sp"/>
+	<arg name="basepath" value="./"/>
+	<arg name="colors"/>
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="8"/>
+
+	<rule ref="PSR1">
+		<exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
+	</rule>
+	<rule ref="WordPress"/>
+	<rule ref="WordPress-Extra"/>
+	<rule ref="WordPress-Docs"/>
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+	<rule ref="Generic.Commenting.Todo"/>
+
+	<config name="minimum_supported_wp_version" value="5.2"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array" value="stars-field"/>
+		</properties>
+	</rule>
+	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
+		<properties>
+			<property name="blank_line_check" value="true"/>
+		</properties>
+		<exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterStart"/>
+	</rule>
+	<rule ref="WordPress.Arrays.MultipleStatementAlignment">
+		<properties>
+			<property name="maxColumn" value="120"/>
+		</properties>
+	</rule>
+</ruleset>

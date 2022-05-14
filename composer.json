@@ -1,0 +1,18 @@
+{
+    "name": "maja/stars-field",
+    "description": "ACF stars rating field",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Maja Kochanowska"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Maja\\StarsField\\": "",
+            "Maja\\StarsField\\Modules\\": "modules"
+        }
+    }
+}

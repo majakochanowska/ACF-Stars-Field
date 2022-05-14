@@ -1,0 +1,56 @@
+.acf-field-stars
+
+	.acf-radio-list
+
+		&.acf-hl
+			li
+				margin-right 0
+				padding-right 8px
+
+		&:hover
+			.star-icon
+				&__body
+				&__border
+					fill #f1c933
+
+		li
+			width 38px
+			height 30px
+
+			label
+				font-size 0
+
+				.star-icon
+					position absolute
+					cursor pointer
+
+					&--active
+						.star-icon__body
+						.star-icon__border
+							fill #f1c933
+
+					&__body
+						fill none
+
+					&__border
+						fill #2e2e2e
+
+			input[type=radio]
+				appearance none
+				border none
+				width 30px
+				height 30px
+				margin 0
+
+				&:checked::before
+					display none
+
+				&:focus
+					box-shadow none
+
+			&:hover ~ li
+				.star-icon__body
+					fill none
+
+				.star-icon__border
+					fill #2e2e2e	

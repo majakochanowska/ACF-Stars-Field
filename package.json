@@ -1,0 +1,49 @@
+{
+	"name": "stars-field",
+	"version": "1.0.0",
+	"description": "ACF stars rating field",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"lint:eslint": "eslint --resolve-plugins-relative-to . ./src/js/*.js",
+		"lint:phpcs": "phpcs",
+		"lint": "npm run lint:eslint && npm run lint:phpcs",
+		"build:webpack": "webpack --config ./webpack.config.js",
+		"build:gulp": "gulp build",
+		"build": "npm run build:gulp && npm run build:webpack",
+		"watch:webpack": "webpack --config ./webpack.config.js --watch",
+		"watch:gulp": "gulp watch",
+		"watch": "npm run watch:webpack & npm run watch:gulp"
+	},
+	"author": "Maja Kochanowska",
+	"dependencies": {
+		"@babel/core": "^7.14.3",
+		"@babel/preset-env": "^7.14.4",
+		"autoprefixer": "^10.3.1",
+		"babel-loader": "^8.2.2",
+		"css-loader": "^5.2.6",
+		"gulp": "^4.0.2",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat-css": "^3.1.0",
+		"gulp-footer": "^2.0.2",
+		"gulp-postcss": "^9.0.0",
+		"gulp-strip-css-comments": "^2.0.0",
+		"gulp-stylus": "^2.7.0",
+		"style-loader": "^2.0.0",
+		"webpack": "^5.38.1",
+		"webpack-cli": "^4.7.2"
+	},
+	"browserslist": [
+		"last 1 version",
+		"> 1%",
+		"not dead"
+	],
+	"devDependencies": {
+		"@wordpress/eslint-plugin": "^12.0.0",
+		"eslint": "^8.15.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-unicorn": "^42.0.0"
+	}
+}
